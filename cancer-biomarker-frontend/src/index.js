@@ -7,16 +7,21 @@ import * as serviceWorker from './serviceWorker';
 import {  MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
 import blue from '@material-ui/core/colors/blue';
 
+
+
 const theme = createMuiTheme({
   palette: {
-    primary: blue,
+    primary: {
+      light: blue[50],
+      main: blue[500],
+      dark: blue[700],
+    },
     secondary: {
       main: '#009688',
     },
   },
 });
 
-console.log(theme)
 ReactDOM.render(
   <React.StrictMode>
     <MuiThemeProvider theme={theme}>

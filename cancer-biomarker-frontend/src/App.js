@@ -1,21 +1,23 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
   useLocation,
 } from "react-router-dom";
 
-import Home from './Home'
+import Home from './Home';
 import Header from './Header';
+import Tool from './Tool';
+import Users from  './Users';
+import MyJobs from './MyJobs';
+
 
 export default function App() {
 
   return (
     <Router>
-      <div>
+      <div >
       <Header />
       <div>
         <Switch>
@@ -23,7 +25,13 @@ export default function App() {
             <About />
           </Route>
           <Route path="/users">
-            <Users />
+            <Users username={"Test-user: Pedro Páramo"}/>
+          </Route>
+          <Route path="/cancer-nn">
+            <Tool />
+          </Route>
+          <Route path="/my-jobs">
+            <MyJobs username={"Test-user: Pedro Páramo"} />
           </Route>
           <Route exact path="/">
             <Home />
@@ -42,11 +50,7 @@ export default function App() {
 
 
 function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
+  return <h2>Work in progress</h2>;
 }
 
 function NoMatch() {

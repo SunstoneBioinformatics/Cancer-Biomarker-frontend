@@ -1,0 +1,5 @@
+﻿relativeID,sequence,biomarker,certainty
+1,">NC_000017.11:c43125364-43044295 Homo sapiens chromosome 17, GRCh38.p13 Primary Assembly",BRCA1,0.98
+1,">NC_000017.11:c43125364-43044295 Homo sapiens chromosome 17, GRCh38.p13 Primary Assembly",BRCA2,0.67
+2,">NC_000017.11:c43125364-43044295 Homo sapiens chromosome 17, GRCh38.p13 Primary Assembly",BRCA1,0.96
+2,">NC_000017.11:c43125364-43044295 Homo sapiens chromosome 17, GRCh38.p13 Primary Assembly",BRCA2,0.6

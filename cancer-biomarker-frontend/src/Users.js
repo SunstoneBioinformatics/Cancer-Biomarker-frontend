@@ -3,7 +3,6 @@ import Button from '@material-ui/core/Button';
 import { Typography } from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   Link as RouterLink
@@ -28,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-function Home() {
+function Users(props) {
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -40,10 +39,10 @@ function Home() {
             <Paper className={classes.paper} >
               <Paper className={classes.paper} elevation={3}>
               <Typography variant="h4">
-                Sunstone Bioinformatics
+                {props.username}'s Profile
               </Typography>
               <Typography variant="subtitle1">
-                Bioinformatic tools at the tip of your fingers
+                Modify your user
               </Typography>
               </Paper>
             <Paper className={classes.paper} elevation={3}>
@@ -54,22 +53,22 @@ function Home() {
             > 
             <Grid item xs={12}>
             <Typography variant="body1">
-              Welcome to the test build of Sunstone Bioinformatics, this page serves as a testing platform for the results of my graduation thesis for the bioinformatics engineering program at <i>Universidad del Valle de Guatemala</i>. Today you will be participating in a guided exploration of the interface corresponding to the <b>Breast Cancer Biomarker Assistant</b> tool.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt nunc ac consequat placerat. Sed laoreet lacus sit amet nibh feugiat laoreet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut volutpat ultrices lacus quis posuere. Donec non congue turpis, vitae eleifend leo. Donec in ipsum nisi. Sed lobortis in nisl id ullamcorper. Aliquam vitae sem eros. Sed volutpat pharetra leo, sit amet posuere massa lacinia et. Pellentesque in commodo quam, non imperdiet nunc. Vestibulum at dolor venenatis, faucibus augue at, consequat neque. Aenean sed efficitur metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
             </Typography>
             </Grid>
             <Grid item xs={6}>
             <Typography variant="body2">
+            Praesent in pulvinar ex. Morbi molestie, dui id gravida dapibus, felis nisl finibus nunc, nec tincidunt risus erat vel turpis. Ut varius ut dolor id consequat. Donec at ultrices nisi. Curabitur accumsan arcu est, ac pulvinar augue malesuada et. Pellentesque vehicula sed libero at lacinia. Nulla id magna lectus.
             </Typography>
-            This tool allows the user to submit FASTA sequences to be evaluated by an Artificial Neural Network model which identifies if any of the sequences submitted match with an up-to-date Breast Cancer Biomarker database maintained in house. This matching process is not a dictionary lookup, it accounts for genetic variations and provides an estimated match. 
             </Grid>
             <Grid item xs={6}>
             <Typography variant="body2">
-            Please answer the questions on the following form: <Link href='https://forms.gle/UF3Xgd6ZyhpNk7VD6' target='_blank'>Survey</Link>. These questions will help me improve the platform to provide a better user experience. 
+            Donec elementum magna ac justo vulputate aliquet. Duis a imperdiet ante. Donec pulvinar eu enim sit amet viverra. Proin vestibulum quam sit amet magna interdum, a scelerisque felis tincidunt. Mauris sed molestie metus, nec hendrerit sem. Aliquam et arcu id eros mattis cursus. Phasellus faucibus euismod libero sed laoreet.
             </Typography>
             </Grid>
             <Grid item xs={12}>
             <Typography variant="body2">
-              Note: This platform is a prototype build and does not produce real results. The purpose of this build is to show the graphical interface in action and to display a specific use case with FASTA sequences pertaining to the BRCA1 cancer gene (these results are not computed in any way by a neural network model). 
+             Donec elementum magna ac justo vulputate aliquet. Duis a imperdiet ante. Donec pulvinar eu enim sit amet viverra. Proin vestibulum quam sit amet magna interdum, a scelerisque felis tincidunt. Mauris sed molestie metus, nec hendrerit sem. Aliquam et arcu id eros mattis cursus. Phasellus faucibus euismod libero sed laoreet.
             </Typography>
             </Grid>
             <Grid item xs={12}>
@@ -84,4 +83,4 @@ function Home() {
   )
 }
 
-export default Home;
+export default Users;
