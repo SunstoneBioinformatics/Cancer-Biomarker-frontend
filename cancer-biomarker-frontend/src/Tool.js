@@ -80,11 +80,16 @@ function Tool() {
       setState({ ...state, filename: "", fileText: ""});
     }
     else if (event.target.files[0] !== undefined){
-      const reader = new FileReader();
+      if (event.target.files[0].name.includes(".fast") ){
+        const reader = new FileReader();
       reader.readAsText(event.target.files[0])
       const filename= event.target.files[0].name
       reader.onloadend =  await function(){
         setState({ ...state, filename: filename, fileText: reader.result});
+      } 
+
+      }else {
+        alert('Please upload a FASTA or FASTQ file')
       }
     } 
     
